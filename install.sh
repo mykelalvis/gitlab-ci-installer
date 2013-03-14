@@ -58,8 +58,8 @@ sudo apt-get update
 sudo apt-get -y upgrade
 
 # Pre set config
-echo "postfix postfix/mailname string $FQDN" | debconf-set-selections
-echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections
+echo "postfix postfix/mailname string $FQDN" | sudo debconf-set-selections
+echo "postfix postfix/main_mailer_type string 'Internet Site'" | sudo debconf-set-selections
 
 # Install the necessary depedencies
 sudo apt-get install -y wget curl gcc checkinstall libxml2-dev libxslt-dev libcurl4-openssl-dev libreadline6-dev libc6-dev libssl-dev make build-essential zlib1g-dev openssh-server git libyaml-dev postfix libpq-dev libicu-dev
