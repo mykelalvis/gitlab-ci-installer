@@ -49,7 +49,7 @@ read -p "Please enter your FQDN: " FQDN
 read -s -p "Please enter your DB password: " DBPASS
 
 # Create a new user for our Gitlab CI
-adduser --disabled-login --gecos 'GitLab CI' gitlab_ci
+sudo adduser --disabled-login --gecos 'GitLab CI' gitlab_ci
 
 # Update packages
 sudo apt-get update
